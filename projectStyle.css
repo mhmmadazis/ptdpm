@@ -1,124 +1,123 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital@0;1&family=Bebas+Neue&family=Reggae+One&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&family=Sriracha&display=swap");
 
-      body {
-        background-size: cover;
-      }
-
-      .header {
-        background-position: center;
-        background-size: cover;
-        padding-left: 8%;
-        padding-right: 8%;
-        margin-bottom: 30px;
-        box-sizing: border-box;
-      }
-
-      .navbar {
-        height: 12%;
-        display: flex;
-        align-items: center;
-      }
-
-      .logo {
-        width: 180px;
-        cursor: pointer;
-      }
-
-      nav {
-        flex: 1;
-        text-align: right;
-      }
-
-      nav ul li {
-        list-style: none;
-        display: inline-block;
-        margin-left: 60px;
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        color: black;
-        font-size: 14px;
-      }
-
-      body footer {
-  background: linear-gradient(
-    293.57deg,
-    #000000 0%,
-    #000000 60%,
-    #fbc620 70%,
-    #fbc620 80%,
-    #fbc620 100%
-  );
-
-  color: #eeeeee;
-  padding-top: 72px !important;
-  padding-bottom: 36px !important;
-}
-
-body footer h5 {
-  font-weight: 600 !important;
-  size: 16px !important;
-  line-height: 150%;
-  color: #ecf1f4;
-}
-
-body footer .address p {
-  font-weight: 400 !important;
-  size: 16px !important;
-  line-height: 150%;
-  color: #ecf1f4;
-}
-
-body footer .nav-footer p {
-  font-weight: 700 !important;
-  size: 16px !important;
-  line-height: 150%;
-  color: #ecf1f4;
-}
-
-body footer .nav-footer a {
-  font-weight: 400 !important;
-  size: 16px !important;
-  color: #ecf1f4;
-}
-
-body footer li {
-  margin-bottom: 12px;
-}
-
-body footer .social-media a {
-  margin-right: 10px;
-  text-decoration: none;
-}
-
-body footer .copyright {
-  margin-top: 76px;
-  padding-top: 36px;
-}
-
-body footer .copyright p {
-  font-weight: 400 !important;
-  size: 16px !important;
-  color: #ecf1f4;
-}
-
-body .cl-light {
-  color: #eeeeee;
-}
-
-body .cl-light-grey-2 {
-  color: #90bcb7;
-}
-
-body .font-lora {
-  font-family: "Lora", sans-serif !important;
-}
-
 body {
   font-family: "Roboto";
   font-size: 16px;
 }
+
+.header {
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 180px;
+  cursor: pointer;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+ .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    margin-left: 165px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url('menudark.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu.open {
+    display: block;
+  }
+
+  .menu li {
+    display: block;
+    margin: 10px 0;
+  }  
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    margin-left: 270px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url('menudark.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu.open {
+    display: block;
+  }
+
+  .menu li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
 .abbbout {
   min-width: 29%;
 }
@@ -249,10 +248,48 @@ a:active {
   right: 0;
   margin: 0 auto;
 }
-.kartu{
-	margin-bottom: 20px;
+.kartu {
+  margin-bottom: 20px;
 }
 
-h5{
-	font-weight: bold;
+h5 {
+  font-weight: bold;
+}
+.footer-07 {
+  background: #121212;
+}
+.footer-07 a {
+  color: #a3de83;
+}
+.footer-07 p {
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer-07 .footer-heading {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.footer-07 .footer-heading .logo {
+  color: #fff;
+}
+.footer-07 .menu {
+  margin-bottom: 30px;
+}
+.footer-07 .menu a {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.footer-07 .menu a:hover {
+  color: #ffb901;
+}
+.footer-07 .ftco-footer-social li a {
+  background: transparent;
+  border: 1px solid #a3de83;
+}
+footer {
+  padding: 3em 0;
 }

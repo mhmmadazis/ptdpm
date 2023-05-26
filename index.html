@@ -14,10 +14,6 @@
       rel="stylesheet"
     />
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-  
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <link
       rel="stylesheet"
       type="text/css"
@@ -53,293 +49,78 @@
 
   <body>
     <!-- HEADER -->
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: "Roboto Condensed", sans-serif;
-    }
+    <div class="header">
+    <div class="navbar">
+      <img src="assets/logo_project2.png" class="logo" />
+      <div class="menu-icon"></div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="project.html">PROJECT</a></li>
+          <li><a href="index.html">ABOUT</a></li>
+          <li><a href="index.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
 
-    body {
-      background-size: cover;
-    }
+  <script>
+    document.querySelector('.menu-icon').addEventListener('click', function () {
+      document.querySelector('.menu').classList.toggle('open');
+    });
+  </script>    
 
-    .header {
-      width: 100%;
-      min-height: 100vh;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(assets/bg1.jpg);
-      background-position: center;
-      background-size: cover;
-      padding-left: 8%;
-      padding-right: 8%;
-      box-sizing: border-box;
-    }
-
-    .navbar {
-      height: 12%;
-      display: flex;
-      align-items: center;
-    }
-
-    .logo {
-      width: 180px;
-      cursor: pointer;
-    }
-
-    nav {
-      flex: 1;
-      text-align: right;
-    }
-
-    nav ul li {
-      list-style: none;
-      display: inline-block;
-      margin-left: 60px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 14px;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      height: 88%;
-      align-items: center;
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    .col {
-      flex-basis: 100%;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: 768px) {
-      .col {
-        flex-basis: 50%;
-        text-align: left;
-      }
-    }
-
-    h2 {
-      color: #fff;
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    button {
-      width: 180px;
-      color: #000;
-      font-size: 12px;
-      padding: 12px 0;
-      background: #fff;
-      border: 0;
-      border-radius: 20px;
-      outline: none;
-      margin-top: 30px;
-      cursor: pointer;
-    }
-
-    .card {
-      width: 200px;
-      height: 230px;
-      display: inline-block;
-      border-radius: 10px;
-      padding: 15px 25px;
-      cursor: pointer;
-      margin: 10px 15px;
-      background-size: cover;
-      transition: transform 0.5s;
-    }
-
-    .card1 {
-      background-image: url(assets/pic-1.jpg);
-    }
-
-    .card2 {
-      background-image: url(assets/pic-2.jpg);
-    }
-
-    .card3 {
-      background-image: url(assets/pic-3.jpg);
-    }
-
-    .card4 {
-      background-image: url(assets/pic-4.jpeg);
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-    }
-
-    h5,
-    p {
-      color: #fff;
-      text-shadow: 0 0 5px #999;
-    }
-
-    #myImg:hover {opacity: 0.7;}
-
-    #myImg2 {
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    #myImg2:hover {opacity: 0.7;}
-
-    /* The Modal (background) */
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      padding-top: 100px; /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    }
-
-    /* Modal Content (image) */
-    .modal-content {
-      margin: auto;
-      display: block;
-      width: 80%;
-      max-width: 700px;
-    }
-
-    /* Caption of Modal Image */
-    #caption {
-      margin: auto;
-      display: block;
-      width: 80%;
-      max-width: 700px;
-      text-align: center;
-      color: #ccc;
-      padding: 10px 0;
-      height: 150px;
-    }
-
-    /* Add Animation */
-    .modal-content, #caption {  
-      -webkit-animation-name: zoom;
-      -webkit-animation-duration: 0.6s;
-      animation-name: zoom;
-      animation-duration: 0.6s;
-    }
-
-    @-webkit-keyframes zoom {
-      from {-webkit-transform:scale(0)} 
-      to {-webkit-transform:scale(1)}
-    }
-
-    @keyframes zoom {
-      from {transform:scale(0)} 
-      to {transform:scale(1)}
-    }
-
-    /* The Close Button */
-    .close {
-      position: absolute;
-      top: 15px;
-      right: 35px;
-      color: #f1f1f1;
-      font-size: 40px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #bbb;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    /* 100% Image Width on Smaller Screens */
-    @media only screen and (max-width: 700px){
-      .modal-content {
-        width: 100%;
-      }
-    }
-  </style>
-      <div class="header">
-        <div class="navbar">
-          <img src="assets/logo_project2.png" class="logo" />
-          <nav>
-            <ul>
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="project.html">PROJECT</a></li>
-              <li><a href="#aboutus">ABOUT</a></li>
-              <li><a href="#contact">CONTACT US</a></li>
-            </ul>
-          </nav>
+      <div class="row">
+        <div class="col">
+          <h2 class="head-title1">PROVERB CONSTRUCTION</h2>
+          <h2 class="head-title2">QUALITY. INTEGRITY.</h2>
         </div>
-
-        <div class="row">
-          <div class="col">
-            <h2 class="head-title1">PROVERB CONSTRUCTION</h2>
-            <h2 class="head-title2">QUALITY. INTEGRITY.</h2>
+        <div class="col">
+          <div class="card card1 myImg" data-bigger-src="assets/pic-1.jpg">
+            <h5>Western Desert</h5>
           </div>
-          <div class="col">
-            <div class="card card1 myImg" data-bigger-src="assets/pic-1.jpg">
-              <h5>Western Desert</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            <div class="card card2 myImg" data-bigger-src="assets/pic-2.jpg">
-              <h5>Western Desert</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            <div class="card card3 myImg" data-bigger-src="assets/pic-3.jpg">
-              <h5>Western Desert</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-            <div class="card card4 myImg" data-bigger-src="assets/pic-4.jpeg">
-              <h5>Western Desert</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
+          <div class="card card2 myImg" data-bigger-src="assets/pic-2.jpg">
+            <h5>Western Desert</h5>
+          </div>
+          <div class="card card3 myImg" data-bigger-src="assets/pic-3.jpg">
+            <h5>Western Desert</h5>
+          </div>
+          <div class="card card4 myImg" data-bigger-src="assets/pic-4.jpeg">
+            <h5>Western Desert</h5>
           </div>
         </div>
       </div>
+    </div>
 
-      <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-      </div>
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </div>
 
-      <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
 
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var images = document.getElementsByClassName("myImg");
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        for (var i = 0; i < images.length; i++) {
-          images[i].onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = this.dataset.biggerSrc;
-            captionText.innerHTML = this.querySelector("p").innerHTML;
-          };
-        }
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-          modal.style.display = "none";
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var images = document.getElementsByClassName("myImg");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      for (var i = 0; i < images.length; i++) {
+        images[i].onclick = function () {
+          modal.style.display = "block";
+          modalImg.src = this.dataset.biggerSrc;
+          captionText.innerHTML = this.querySelector("p").innerHTML;
         };
-      </script>
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    </script>
     <!-- END HEADER -->
 
     <!-- ABOUT -->
@@ -393,11 +174,7 @@
                       </div>
                     </div>
                     <h4>VISI DAN MISI</h4>
-                    <p id="visimisi">
-                      Aenean vulputate eleifend tellus. Aenean leo ligula,
-                      porttitor eu, consequat vitae, eleifend ac, enim. Aliquam
-                      lorem ante, dapibus in.
-                    </p>
+                    <p id="visimisi"></p>
                   </div>
                 </div>
               </div>
@@ -523,24 +300,20 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">
-            <img src="assets/logo_project2.png" class="logo">
+            <img src="assets/logo_project3.png" class="logo" />
             <p class="menu">
               <a href="index.html">Home</a>
-              <a href="#">Project</a>
+              <a href="project.html">Project</a>
               <a href="#aboutus">About</a>
               <a href="#contact">Contact</a>
             </p>
           </div>
         </div>
-        <p style="text-align: center; text-shadow: none;">Copyright ©2023 All rights reserved</p>
+        <p style="text-align: center; text-shadow: none">
+          Copyright ©2023 All rights reserved
+        </p>
       </div>
     </footer>
-    
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
     <!-- END FOOTER -->
 
     <script
