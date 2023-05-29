@@ -63,9 +63,8 @@ var images = ["assets/bg1.jpg", "assets/pic-1.jpg", "assets/pic-3.jpg"];
         button.classList.add("active");
       }
       $(".logo-slider").slick({
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        arrows: true,
         autoplay: true,
         autoplaySpeed: 2000,
         infinite: true,

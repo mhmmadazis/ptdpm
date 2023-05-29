@@ -156,7 +156,7 @@
                 <div class="clearfix">
                   <div class="feature-content">
                     <div class="col d-flex">
-                      <div class="">
+                      <div class="but">
                         <button
                           class="button1"
                           onclick="showVisimisi('a', this)"
@@ -217,33 +217,121 @@
     <!-- END SERVICES -->
 
     <!-- CLIENT -->
-    <div class="container slide">
-      <h1 class="client">OUR CLIENT</h1>
-      <div class="logo-slider">
-        <!--logo size 400x200 -->
-        <div class="item">
-          <a href="#"><img src="assets/8.png" /></a>
-        </div>
-        <div class="item">
-          <a href="#"><img src="assets/2.png" /></a>
-        </div>
-        <div class="item">
-          <a href="#"><img src="assets/3.png" /></a>
-        </div>
-        <div class="item">
-          <a href="#"><img src="assets/4.png" /></a>
-        </div>
-        <div class="item">
-          <a href="#"><img src="assets/5.png" /></a>
-        </div>
-        <div class="item">
-          <a href="#"><img src="assets/6.png" /></a>
-        </div>
-        <div class="item">
-          <a href="#"><img src="assets/7.png" /></a>
-        </div>
+    <style>
+      .our-client {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Menambahkan wrap agar kotak-kotak berada dalam baris yang baru saat lebar layar terlalu kecil */
+    }
+
+    .one-div {
+      width: 220px;
+      height: 100px;
+      background-color: #f0f5f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      color: #333;
+      position: relative;
+      overflow: hidden;
+      margin: 10px; /* Menambahkan margin untuk memberi jarak antar kotak */
+    }
+
+    .one-div::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      z-index: -1;
+      background-image: linear-gradient(45deg, #e1e8f2, #f0f5f9);
+      border-radius: 20px;
+      opacity: 0.8;
+      transform: scale(1.2);
+      filter: blur(10px);
+    }
+
+    .one-div:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .one-div:hover::before {
+      animation: gradient-animation 5s linear infinite;
+    }
+
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      /* Mengatur tampilan untuk lebar layar <= 400px */
+      .one-div {
+        width: 100%; /* Mengubah lebar menjadi 100% agar kotak-kotak mengisi lebar layar */
+        margin: 10px 0; /* Menghilangkan margin horizontal dan memberikan jarak vertikal antar kotak */
+      }
+    }
+
+    @media screen and (min-width: 401px) and (max-width: 800px) {
+      /* Mengatur tampilan untuk lebar layar antara 401px hingga 800px */
+      .one-div {
+        width: calc(50% - 20px); /* Mengatur lebar menjadi 50% dikurangi margin agar dapat menampung 2 kotak dalam satu baris */
+      }
+    }
+
+    @media screen and (min-width: 801px) and (max-width: 1200px) {
+      /* Mengatur tampilan untuk lebar layar antara 801px hingga 1200px */
+      .one-div {
+        width: calc(33.33% - 20px); /* Mengatur lebar menjadi 33.33% dikurangi margin agar dapat menampung 3 kotak dalam satu baris */
+      }
+    }
+    </style>
+    <div style="text-align: center; margin: 20px; margin-bottom: 30px;">
+      <p class="client" style="color: black; text-shadow: none;">OUR CLIENT</p>
+    <div class="container our-client">
+      <div class="one-div">
+        <img src="assets/2.svg" alt="Gambar 1" width="150" height="80">
+      </div>
+      <div class="one-div">
+        <img src="assets/3.svg" alt="Gambar 2" width="150" height="80">
+      </div>
+      <div class="one-div">
+        <img src="assets/4.svg" alt="Gambar 3" width="150" height="80">
+      </div>
+      <div class="one-div">
+        <img src="assets/5.svg" alt="Gambar 4" width="150" height="80">
+      </div>
+      <div class="one-div">
+        <img src="assets/6.svg" alt="Gambar 5" width="150" height="80">
       </div>
     </div>
+
+    <div class="container our-client" style="margin: 0px auto;">
+      <div class="one-div">
+        <img src="assets/7.svg" alt="Gambar 1" width="150" height="80">
+      </div>
+      <div class="one-div">
+        <img src="assets/8.svg" alt="Gambar 2" width="150" height="80">
+      </div>
+    </div>
+  </div>
     <!-- END CLIENT -->
 
     <!-- CONTACT -->

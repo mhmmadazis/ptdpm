@@ -50,14 +50,51 @@ nav ul li a {
 }
 
 /*untuk layar device berukuran sedang*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
    .navbar {
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .menu-icon {
-    margin-left: 120px;
+    margin-left: 70px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url('menu.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu.open {
+    display: block;
+  }
+
+  .menu li {
+    display: block;
+    margin: 10px 0;
+  }
+  .button1 {
+    border-radius: 0;
+    width: 45px;
+    height: 56px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 599px) {
+   .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    margin-left: 180px;
     display: block;
     width: 40px;
     height: 40px;
@@ -83,7 +120,7 @@ nav ul li a {
   }
 }
  
- @media screen and (max-width: 700px) {
+ @media screen and (min-width: 599px) and (max-width: 700px) {
    .navbar {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -631,6 +668,12 @@ i {
 .logo-slider .slick-slide {
   margin: 15px;
 }
+.slick-next{
+  right: 0px;
+}
+.slick-prev{
+  left:0px;
+}
 .abbbout {
   min-width: 29%;
 }
@@ -729,12 +772,17 @@ a:active {
     width: 100%;
   }
   .visi-misi{
-    margin-left: -7px;
+    margin-left: 1px;
   }
   .button1 {
     border-radius: 0;
-    width: 205px;
-    height: 56px;
+    width: 165px;
+    height: 50px;
+  }
+  .feature .feature-box .feature-content {
+    float: left;
+    padding-left: 0;
+    width: 78%;
   }
 }
 
