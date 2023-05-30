@@ -593,7 +593,7 @@ i {
   display: inline-block;
   margin-top: 12px;
 }
-.right-side .button input[type="button"] {
+.submit {
   color: #fff;
   font-size: 18px;
   outline: none;
@@ -604,7 +604,7 @@ i {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button input[type="button"]:hover {
+.button .submit:hover {
   background: lightblue;
 }
 
